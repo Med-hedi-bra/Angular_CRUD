@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "product1",
+      "price": "120",
+      "quantity": "122\n",
+      "id": 1
+    },
+    {
+      "name": "product2",
+      "price": "2000",
+      "quantity": "12",
+      "id": 2
+    },
+    {
+      "name": "product 3",
+      "price": "1200",
+      "quantity": "129",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Angular CRUD </h1>
+    <br><br><br>
+  
+    <a href="#" routerLink="/product/create/" class="btn btn-success">Create New Product</a>
+    <br><br>
+    <div class="form-group">
+        <label for="name">Search by Name:</label>
+        <input [(ngModel)]="filter.name" id="name" name="name" class="form-control">
+      </div>
+      <br>
+    <button (click)="search()" class="btn btn-primary">Search</button>
+    <br><br><br>
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <button   [routerLink]="['/product/', product.id, 'view']" class="btn btn-info">View</button>
+          <button [routerLink]="['/product/', product.id, 'edit']" class="btn btn-primary">Edit</button>
+          <button type="button"   (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+          
+        </td>
+      </tr>
+    </table>
+ </div>
